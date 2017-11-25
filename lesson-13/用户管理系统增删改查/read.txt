@@ -1,0 +1,17 @@
+<!-- 创建一个基于 webpack 模板的新项目 -->
+1.cd 到project文件夹下 vue init webpack vcustomers
+2.cd vcustomers
+3.cnpm install
+4.npm run dev
+这样就新建好了一个项目
+5.cnpm install vue-router --save-dev
+6.cnpm install vue-resource --save
+6.npm run dev
+
+
+
+vue-resource是一个非常轻量的用于处理HTTP请求的插件，它提供了两种方式来处理HTTP请求：
+使用Vue.http或this.$http
+使用Vue.resource或this.$resource
+这两种方式本质上没有什么区别，阅读vue-resource的源码，你可以发现第2种方式是基于第1种方式实现的。
+
