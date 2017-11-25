@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<!-- 引入Vue cdn  要写在body前面-->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- DOM标签的容器	 -->
+	<div id="vue-app">
+	<h1>计算属性Computed</h1>
+	<label for="">姓名:</label>
+	<button @click="a++">Add to a</button>
+	<button @click="b++">Add to b</button>
+	<p>A = {{a}}</p>
+	<p>B = {{b}}</p>
+<!-- 	<p>Age + A = {{addToA()}}</p>
+	<p>Age + B = {{addToB()}}</p> -->
+	<p>Age + A = {{addToA}}</p>
+	<p>Age + B = {{addToB}}</p>
+
+
+
+
+	</div>
+
+	<!-- 自己写的 -->
+	<script src="app.js"></script>
+</body>
+</html>

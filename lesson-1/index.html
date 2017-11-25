@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<!-- 引入Vue cdn  要写在body前面-->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- DOM标签的容器	 -->
+	<div id="vue-app">
+		<!-- 模板语法 -->
+		<!-- {{name}} -->
+		<!-- 虚拟DOM VUE会另外复制一份DOM，操作完会跟原来DOM比较，不同填进去 -->
+		<!-- <h1>Hello {{name}}</h1> -->
+		<p>{{name}}</p>
+		<p>{{job}}</p>
+		<p>{{greet('afternoon')}}</p>
+		<!-- 属性绑定 -->
+		<!-- <a href="http://www.thenewstep.com">WEB开发</a> -->
+		<a v-bind:href="website">WEB开发</a>
+
+		<!-- 标签绑定 -->
+		<!-- websiteTag 一定是标签 然后会把websiteTag这个标签插入p中间 -->
+		<p v-html="websiteTag"></p>
+		<!-- 小练习 -->
+		<input type="text" v-bind:value="name">
+
+
+	</div>
+
+	<!-- 自己写的 -->
+	<script src="app.js"></script>
+</body>
+</html>

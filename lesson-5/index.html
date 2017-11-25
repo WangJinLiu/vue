@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<!-- 引入Vue cdn  要写在body前面-->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- DOM标签的容器	 -->
+	<div id="vue-app">
+	<h1>动态css样式</h1>
+	<h2>实例 1</h2>
+	<!-- true 前是类名 -->
+	<div v-bind:class="{red:true,blue:true}"></div>
+	<div v-on:click="judge = !judge"  v-bind:class="{changeColor:judge}">
+		<span>Henery</span>
+	</div>
+	<h2>实例 2</h2>
+	<button v-on:click="color = !color">changeColor</button>
+	<button v-on:click="color1 = !color1">changeWidth</button>
+	<div v-bind:class="compClasses">
+		<p>你好</p>
+	</div>
+	
+
+
+
+
+
+	</div>
+
+	<!-- 自己写的 -->
+	<script src="app.js"></script>
+</body>
+</html>

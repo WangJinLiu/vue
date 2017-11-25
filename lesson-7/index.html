@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<!-- 引入Vue cdn  要写在body前面-->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- DOM标签的容器	 -->
+	<div id="vue-app">
+		<h1>循环语句 v-for</h1>
+
+		<ul>
+			<li v-for="color in colors">{{color}}</li>
+		</ul>
+		<ul>
+			<!-- index 拿到下标 -->
+			<li v-for="(user,index) in users">
+				{{index}}. {{user.name}} - {{user.age}}
+			</li>
+		</ul>
+		<template v-for="(user,index) in users">
+			<h3>{{index}} . {{user.name}}</h3>
+			<p>{{user.age}}</p>
+		</template>
+
+		<template v-for="(user,index) in users">
+			<div v-for="(val,key) in user">
+				<p>{{key}} - {{val}}</p>
+			</div>
+		</template>
+	
+
+
+
+
+
+	</div>
+
+	<!-- 自己写的 -->
+	<script src="app.js"></script>
+</body>
+</html>

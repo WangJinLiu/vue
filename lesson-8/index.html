@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<!-- 引入Vue cdn  要写在body前面-->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- DOM标签的容器	 -->
+	<div id="vue-app-one">
+		<p>{{title}}</p>
+		<h3>{{greet}}</h3>
+	</div>
+	<div id="vue-app-two">
+		<p>{{title}}</p>
+		<h3>{{greet}}</h3>
+		<button v-on:click="mm">change</button>		
+	</div>
+	
+
+	<!-- 自己写的 -->
+	<script src="app.js"></script>
+</body>
+</html>

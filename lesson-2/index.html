@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<!-- 引入Vue cdn  要写在body前面-->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- DOM标签的容器	 -->
+	<div id="vue-app">
+		<h1>Events事件</h1>
+		<!-- 单点击事件 -->
+		<!-- <button v-on:click="age++">加一岁</button>
+		<button v-on:click="age--">减一岁</button> -->
+		<!-- <button v-on:click="addAge(1)">加一岁</button>
+		<button v-on:click="subtractAge(1)">减一岁</button>
+		<button v-on:click="addAge(10)">加十岁</button>
+		<button v-on:click="subtractAge(10)">减十岁</button>
+		<p>我的年龄是:{{age}}</p> -->
+		<!-- 双击事件  dblclick -->
+		<button v-on:click.once="addAge(1)">加一岁</button>
+		<button v-on:click="subtractAge(1)">减一岁</button>
+		<button v-on:dblclick="addAge(10)">加十岁</button>
+		<button v-on:dblclick="subtractAge(10)">减十岁</button>
+		<p>我的年龄是:{{age}}</p>
+
+		<!-- 鼠标事件 -->
+		<!-- @  == v-on -->
+		<div id="canvas" @mousemove="moveXY">
+			{{x}} , {{y}} - 
+			<!-- <span @mousemove="stopPropagation">阻止冒泡事件</span> -->
+			<span @mousemove.stop="">阻止冒泡事件</span>
+
+		</div>
+	<!-- 事件修饰符 once 见上面-->
+	<!-- 事件修饰符 prevent 阻止默认事件-->
+
+	<a v-on:click.prevent="alert" href="http://www.baidu.con">
+		thenewstep
+	</a>
+
+	<!-- 键盘事件 -->
+	<label for="">姓名:</label>
+	<input type="text" v-on:keyup.enter="logName">
+	<label for="">年龄:</label>
+	<input type="text" v-on:keyup.alt.enter="logAge">
+	<!-- 健值修饰符 ctl.enter -->
+
+
+
+	</div>
+
+	<!-- 自己写的 -->
+	<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<!-- 引入Vue cdn  要写在body前面-->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- DOM标签的容器	 -->
+	<div id="vue-app">
+	<h1>双向数据绑定</h1>
+	<label for="">姓名:</label>
+	<!-- ref 相当于id -->
+	<!-- <input ref="name1" type="text" v-on:keyup="logName" v-bind:value="name"> -->
+	<!-- v-model 中要和你想关联的属性名一致 -->
+	<input type="text" v-model="name">
+	<span>{{name}}</span>
+	<label for="">年龄:</label>
+	<input type="text" v-model="age">
+	<span>{{age}}</span>
+
+
+
+
+	</div>
+
+	<!-- 自己写的 -->
+	<script src="app.js"></script>
+</body>
+</html>
